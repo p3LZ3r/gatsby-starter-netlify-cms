@@ -92,6 +92,11 @@ const ProjectListing = styled.ul`
   }
 `
 
+const CallToAction = styled.a`
+font-size: 30px;
+font-style: normal;
+`
+
 const IndexWrapper = Wrapper.withComponent('main')
 
 class Index extends Component {
@@ -112,6 +117,7 @@ class Index extends Component {
                 </li>
               ))}
             </Social>
+            <CallToAction><a href="mailto:kontakt@torsten-linnecke.de">Work with me</a></CallToAction>
           </HeroInner>
         </Hero>
         <IndexWrapper id={website.skipNavId} style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>

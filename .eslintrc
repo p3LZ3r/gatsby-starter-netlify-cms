@@ -9,6 +9,9 @@
       "classes": true
     }
   },
+  "globals": {
+    "tw": true
+  },
   "env": {
     "browser": true,
     "node": true,
