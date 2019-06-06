@@ -14,8 +14,16 @@ const Hero = styled.header`
 const HeroInner = styled(Wrapper)`
   padding-top: 13rem;
   padding-bottom: 13rem;
+  img {
+    width: 100px;
+    padding-bottom: 1.5rem;
+  }
   h1 {
     margin-bottom: 2rem;
+  }
+  a {
+    font-size: 30px;
+    font-style: normal;
   }
   @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 10rem;
@@ -92,11 +100,6 @@ const ProjectListing = styled.ul`
   }
 `
 
-const CallToAction = styled.a`
-font-size: 30px;
-font-style: normal;
-`
-
 const IndexWrapper = Wrapper.withComponent('main')
 
 class Index extends Component {
@@ -108,6 +111,7 @@ class Index extends Component {
       <Layout>
         <Hero>
           <HeroInner>
+            <img src="/logos/logo-1024.png" alt="Logo" />
             <h1>{homepage.data.title.text}</h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
@@ -117,7 +121,7 @@ class Index extends Component {
                 </li>
               ))}
             </Social>
-            <CallToAction><a href="mailto:kontakt@torsten-linnecke.de">Work with me</a></CallToAction>
+            <a href="mailto:kontakt@torsten-linnecke.de">Work with me</a>
           </HeroInner>
         </Hero>
         <IndexWrapper id={website.skipNavId} style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
